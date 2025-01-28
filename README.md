@@ -1,2 +1,3 @@
 # masterMLpython
-Exercises of the Master in Python - plus other examples
+- Exercises of the UNED Machine Learning Master in Python - 
+- Labs from the Coursera "IBM AI Engineering Professional Certificate"
