@@ -1,0 +1,40 @@
+name: masterMLpythonConda
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - python=3.11.11
+  - keras==3.6.0
+  - tensorflow-base=2.17.0
+prefix: /home/francd/anaconda3/envs/masterMLpythonGPU
+#
+# After  conda env create -f masterMLpythonGPU.yml
+# execute:
+# 
+# conda install conda-forge::tensorflow-gpu   
+#
+# When starting jupyter-lab, it crashes with message error
+# ImportError: /home/francd/anaconda3/envs/masterMLpythonGPU/lib/python3.11/lib-dynload/_sqlite3.cpython-311-x86_64-linux-gnu.so: undefined symbol: sqlite3_deserialize
+#
+# Update all packages:  conda  update --all
+#
+# And it is solved!!!!
+#
+#  To allow gpu use, add a new kernel:   ipython kernel install --user --name=masterMLpythonGPU
+#
+#  Output:
+# (masterMLpythonGPU) francd@debianato:~/git/masterMLpython$   ipython kernel install --user --name=masterMLpythonGPU
+# Installed kernelspec masterMLpythonGPU in /home/francd/.local/share/jupyter/kernels/mastermlpythongpu
+#
+#
+#   Also install : 
+#   conda install conda-forge::jupyterlab
+#   conda install jupyterlab-git
+#
+#
+# Very useful info:
+#
+# https://www.techentice.com/how-to-make-jupyter-notebook-to-run-on-gpu/
